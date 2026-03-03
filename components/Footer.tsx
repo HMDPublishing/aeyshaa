@@ -128,13 +128,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-blush-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="border-t border-blush-200 pt-8 flex items-center justify-center">
           <p className="font-dmsans text-sm text-softgray">
             © 2026 Aeysha Mahmood. All rights reserved.
-          </p>
-          <p className="font-dmsans text-xs text-softgray/70">
-            Website by{" "}
-            <span className="text-rosegold/70">HMD Publishing</span>
           </p>
         </div>
       </div>
