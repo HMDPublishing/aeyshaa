@@ -5,7 +5,28 @@ export const alt = "Aeysha Mahmood — Author & Storyteller";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OgImage() {
+export default async function OgImage() {
+  // Fetch Playfair Display 700 from Google Fonts
+  const cssText = await fetch(
+    "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap",
+    { headers: { "User-Agent": "Mozilla/5.0" } }
+  ).then((res) => res.text());
+
+  // Extract the first woff2 URL (regular 700)
+  const regularUrl = cssText.match(/style: normal[\s\S]*?src: url\(([^)]+)\)/)?.[1] ??
+    cssText.match(/src: url\(([^)]+)\)/)?.[1];
+  // Extract the italic 700 URL
+  const italicUrl = cssText.match(/style: italic[\s\S]*?src: url\(([^)]+)\)/)?.[1];
+
+  const [regularData, italicData] = await Promise.all([
+    regularUrl ? fetch(regularUrl).then((r) => r.arrayBuffer()) : Promise.resolve(null),
+    italicUrl ? fetch(italicUrl).then((r) => r.arrayBuffer()) : Promise.resolve(null),
+  ]);
+
+  const fonts = [] as { name: string; data: ArrayBuffer; style: "normal" | "italic"; weight: 700 }[];
+  if (regularData) fonts.push({ name: "Playfair Display", data: regularData, style: "normal", weight: 700 as const });
+  if (italicData) fonts.push({ name: "Playfair Display", data: italicData, style: "italic", weight: 700 as const });
+
   return new ImageResponse(
     (
       <div
@@ -18,7 +39,6 @@ export default function OgImage() {
           alignItems: "flex-start",
           justifyContent: "center",
           padding: "80px",
-          fontFamily: "Georgia, serif",
           position: "relative",
           overflow: "hidden",
         }}
@@ -51,7 +71,6 @@ export default function OgImage() {
             position: "absolute",
             top: "50%",
             right: 80,
-            transform: "translateY(-50%)",
             width: 2,
             height: 280,
             background: "rgba(183, 110, 121, 0.2)",
@@ -84,15 +103,17 @@ export default function OgImage() {
           </span>
         </div>
 
-        {/* Name */}
+        {/* Name — Playfair Display */}
         <div
           style={{
             fontSize: 88,
             fontWeight: 700,
+            fontFamily: "Playfair Display",
+            fontStyle: "normal",
             color: "#2D2D2D",
             lineHeight: 1.05,
             marginBottom: 8,
-            letterSpacing: "-1px",
+            letterSpacing: "-0.5px",
           }}
         >
           Aeysha
@@ -101,11 +122,12 @@ export default function OgImage() {
           style={{
             fontSize: 88,
             fontWeight: 700,
-            color: "#B76E79",
+            fontFamily: "Playfair Display",
             fontStyle: "italic",
+            color: "#B76E79",
             lineHeight: 1.05,
             marginBottom: 28,
-            letterSpacing: "-1px",
+            letterSpacing: "-0.5px",
           }}
         >
           Mahmood
@@ -128,7 +150,8 @@ export default function OgImage() {
             fontSize: 28,
             color: "#6B6B6B",
             fontStyle: "italic",
-            fontFamily: "Georgia, serif",
+            fontFamily: "Playfair Display",
+            fontWeight: 700,
             marginBottom: 16,
           }}
         >
@@ -149,6 +172,6 @@ export default function OgImage() {
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    { width: 1200, height: 630, fonts }
   );
 }
