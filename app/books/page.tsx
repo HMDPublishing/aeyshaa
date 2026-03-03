@@ -56,7 +56,7 @@ export default function BooksPage() {
                 <div className="absolute inset-0 bg-blush-gradient rounded-3xl blur-xl opacity-50 scale-95" />
                 <div className="relative group">
                   <div className="absolute -inset-3 bg-gradient-to-r from-blush-200 to-blush-300 rounded-2xl opacity-40 blur-lg group-hover:opacity-60 transition-opacity" />
-                  <div className="relative w-72 md:w-80 aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl shadow-rosegold/20 rotate-2 hover:rotate-0 transition-transform duration-500">
+                  <div className="relative w-72 md:w-80 aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-rosegold/20 rotate-2 hover:rotate-0 transition-transform duration-500">
                     <Image
                       src="/assets/lilly-and-tommy-book-cover.webp"
                       alt="Lilly & Tommy: A Cat's Adventure"

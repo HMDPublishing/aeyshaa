@@ -132,13 +132,13 @@ export default function HomePage() {
             <div className="group bg-gradient-to-br from-blush-50 to-cream rounded-3xl p-8 border border-blush-100 hover:shadow-2xl hover:shadow-rosegold/10 transition-all duration-500 hover:-translate-y-1">
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="relative w-24 h-36 rounded-xl overflow-hidden shadow-xl shadow-rosegold/10 group-hover:shadow-2xl group-hover:shadow-rosegold/20 transition-all duration-500 group-hover:-rotate-2">
+                  <div className="relative w-36 h-36 rounded-xl overflow-hidden shadow-xl shadow-rosegold/10 group-hover:shadow-2xl group-hover:shadow-rosegold/20 transition-all duration-500 group-hover:-rotate-2">
                     <Image
                       src="/assets/lilly-and-tommy-book-cover.webp"
                       alt="Lilly & Tommy: A Cat's Adventure"
                       fill
                       className="object-cover object-center"
-                      sizes="96px"
+                      sizes="144px"
                     />
                   </div>
                 </div>
