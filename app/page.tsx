@@ -132,13 +132,13 @@ export default function HomePage() {
             <div className="group bg-gradient-to-br from-blush-50 to-cream rounded-3xl p-8 border border-blush-100 hover:shadow-2xl hover:shadow-rosegold/10 transition-all duration-500 hover:-translate-y-1">
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="relative w-28 h-36 rounded-xl overflow-hidden shadow-xl shadow-rosegold/10 group-hover:shadow-2xl group-hover:shadow-rosegold/20 transition-all duration-500 group-hover:-rotate-2">
+                  <div className="relative w-24 h-36 rounded-xl overflow-hidden shadow-xl shadow-rosegold/10 group-hover:shadow-2xl group-hover:shadow-rosegold/20 transition-all duration-500 group-hover:-rotate-2">
                     <Image
-                      src="/assets/Lily-tommy-book-cover.png"
+                      src="/assets/lilly-and-tommy-book-cover.webp"
                       alt="Lilly & Tommy: A Cat's Adventure"
                       fill
-                      className="object-cover"
-                      sizes="112px"
+                      className="object-cover object-center"
+                      sizes="96px"
                     />
                   </div>
                 </div>
@@ -170,13 +170,13 @@ export default function HomePage() {
             <div className="group bg-gradient-to-br from-blush-50 to-cream rounded-3xl p-8 border border-blush-100 hover:shadow-2xl hover:shadow-rosegold/10 transition-all duration-500 hover:-translate-y-1">
               <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="relative w-28 h-36 rounded-xl overflow-hidden shadow-xl shadow-rosegold/10 group-hover:shadow-2xl group-hover:shadow-rosegold/20 transition-all duration-500 group-hover:-rotate-2">
+                  <div className="relative w-24 h-36 rounded-xl overflow-hidden shadow-xl shadow-rosegold/10 group-hover:shadow-2xl group-hover:shadow-rosegold/20 transition-all duration-500 group-hover:-rotate-2">
                     <Image
                       src="/assets/history-wildest-tales.webp"
                       alt="History's Wildest Tales for Curious Kids"
                       fill
-                      className="object-cover"
-                      sizes="112px"
+                      className="object-cover object-center"
+                      sizes="96px"
                     />
                   </div>
                 </div>
@@ -372,9 +372,9 @@ export default function HomePage() {
             <span className="font-dmsans text-xs text-softgray uppercase tracking-widest">Follow Along</span>
             <div className="flex gap-4">
               {[
-                { label: "Instagram", href: "https://instagram.com/ryterly_publishing", icon: "IG" },
-                { label: "LinkedIn", href: "https://linkedin.com/company/ryterly_publishing", icon: "LI" },
-                { label: "YouTube", href: "https://youtube.com/@ryterly_publishing", icon: "YT" },
+                { label: "Instagram", href: "https://www.instagram.com/storiesbyaeysha/", icon: "IG" },
+                { label: "LinkedIn", href: "https://www.linkedin.com/in/aeysha-mahmood-4b2684183/", icon: "LI" },
+                { label: "Amazon", href: "https://www.amazon.com/stores/author/B0DPVSXWCY", icon: "AM" },
               ].map((social) => (
                 <a
                   key={social.label}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BookOpen, ShoppingCart, Star } from "lucide-react";
+import { ArrowRight, BookOpen, ShoppingCart, Star, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Books by Aeysha Mahmood — Children's Books for Curious Young Minds",
@@ -56,12 +56,12 @@ export default function BooksPage() {
                 <div className="absolute inset-0 bg-blush-gradient rounded-3xl blur-xl opacity-50 scale-95" />
                 <div className="relative group">
                   <div className="absolute -inset-3 bg-gradient-to-r from-blush-200 to-blush-300 rounded-2xl opacity-40 blur-lg group-hover:opacity-60 transition-opacity" />
-                  <div className="relative w-72 md:w-80 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl shadow-rosegold/20 rotate-2 hover:rotate-0 transition-transform duration-500">
+                  <div className="relative w-72 md:w-80 aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl shadow-rosegold/20 rotate-2 hover:rotate-0 transition-transform duration-500">
                     <Image
-                      src="/assets/Lily-tommy-book-cover.png"
+                      src="/assets/lilly-and-tommy-book-cover.webp"
                       alt="Lilly & Tommy: A Cat's Adventure"
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                       sizes="(max-width: 768px) 288px, 320px"
                     />
                   </div>
@@ -112,14 +112,18 @@ export default function BooksPage() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="#"
+                  href="https://www.amazon.com/Lilly-Tommy-Adventure-Girls-Devotion-ebook/dp/B0F1YV3CFT?ref_=ast_author_dp&th=1&psc=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group bg-rosegold text-white px-7 py-3.5 rounded-full font-dmsans text-sm tracking-wide hover:bg-rosegold-dark transition-all duration-300 hover:shadow-lg hover:shadow-rosegold/20 flex items-center justify-center gap-2"
                 >
                   <ShoppingCart size={15} />
-                  Available Now
+                  Buy on Amazon
                 </a>
                 <a
-                  href="#"
+                  href="https://www.amazon.com/Lilly-Tommy-Adventure-Girls-Devotion-ebook/dp/B0F1YV3CFT?ref_=ast_author_dp&th=1&psc=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group border border-rosegold text-rosegold px-7 py-3.5 rounded-full font-dmsans text-sm tracking-wide hover:bg-rosegold hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <BookOpen size={15} />
@@ -150,6 +154,13 @@ export default function BooksPage() {
                 <span className="bg-white text-rosegold text-xs px-3 py-1.5 rounded-full font-dmsans tracking-wide border border-blush-200">Ages 8–12</span>
                 <span className="bg-rosegold text-white text-xs px-3 py-1.5 rounded-full font-dmsans tracking-wide">Ryterly Publishing</span>
               </div>
+
+              {/* Release date badge */}
+              <div className="inline-flex items-center gap-2 bg-blush-100 border border-blush-200 text-rosegold px-4 py-2 rounded-full font-dmsans text-xs tracking-wide mb-5">
+                <Calendar size={13} />
+                Releasing March 15, 2026
+              </div>
+
               <h2 className="font-playfair text-4xl md:text-5xl text-charcoal mb-2 leading-tight">
                 History&apos;s Wildest Tales
               </h2>
@@ -185,22 +196,19 @@ export default function BooksPage() {
                 </div>
               </div>
 
-              {/* CTAs */}
+              {/* CTAs — pre-order coming soon */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="#"
-                  className="group bg-rosegold text-white px-7 py-3.5 rounded-full font-dmsans text-sm tracking-wide hover:bg-rosegold-dark transition-all duration-300 hover:shadow-lg hover:shadow-rosegold/20 flex items-center justify-center gap-2"
-                >
-                  <ShoppingCart size={15} />
-                  Available Now
-                </a>
-                <a
-                  href="#"
+                <div className="flex items-center justify-center gap-2 bg-blush-100 text-softgray px-7 py-3.5 rounded-full font-dmsans text-sm tracking-wide cursor-not-allowed opacity-80 border border-blush-200">
+                  <Calendar size={15} />
+                  Available March 15, 2026
+                </div>
+                <Link
+                  href="/contact"
                   className="group border border-rosegold text-rosegold px-7 py-3.5 rounded-full font-dmsans text-sm tracking-wide hover:bg-rosegold hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <BookOpen size={15} />
-                  Read Preview
-                </a>
+                  Enquire About This Book
+                </Link>
               </div>
             </div>
 
@@ -209,12 +217,12 @@ export default function BooksPage() {
               <div className="flex justify-center mb-10">
                 <div className="relative group">
                   <div className="absolute -inset-3 bg-gradient-to-r from-rosegold/20 to-blush-200 rounded-2xl blur-lg group-hover:opacity-80 transition-opacity" />
-                  <div className="relative w-72 md:w-80 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl shadow-rosegold/20 -rotate-2 hover:rotate-0 transition-transform duration-500">
+                  <div className="relative w-72 md:w-80 aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl shadow-rosegold/20 -rotate-2 hover:rotate-0 transition-transform duration-500">
                     <Image
                       src="/assets/history-wildest-tales.webp"
                       alt="History's Wildest Tales for Curious Kids"
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                       sizes="(max-width: 768px) 288px, 320px"
                     />
                   </div>
