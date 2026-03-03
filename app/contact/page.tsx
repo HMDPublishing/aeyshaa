@@ -3,9 +3,10 @@ import { Mail, MapPin, Instagram, Linkedin } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Aeysha Mahmood — Get in Touch",
+  title: "Contact Aeysha Mahmood",
   description:
-    "Contact Aeysha Mahmood for book inquiries, publishing services, speaking events, or general questions. Based in the United Kingdom.",
+    "Get in touch with Aeysha Mahmood for book collaborations, publishing enquiries, or speaking events.",
+  alternates: { canonical: "https://aeyshaa.com/contact" },
 };
 
 function AmazonIcon({ size = 17 }: { size?: number }) {

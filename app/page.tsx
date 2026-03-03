@@ -4,14 +4,39 @@ import Link from "next/link";
 import { ArrowRight, Star, Sparkles, BookOpen, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Aeysha Mahmood — Author. Storyteller. Publishing Visionary.",
+  title: "Aeysha Mahmood — Author & Storyteller",
   description:
-    "From children's tales that spark imagination to wild history that makes kids say 'No way!' — Aeysha Mahmood writes books that bring stories to life.",
+    "Official website of Aeysha Mahmood — children's book author, storyteller, and founder of Ryterly Publishing. Explore her books, story, and publishing journey.",
+  alternates: { canonical: "https://aeyshaa.com" },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Aeysha Mahmood",
+  url: "https://aeyshaa.com",
+  image: "https://aeyshaa.com/assets/Aeysha-headshot.webp",
+  jobTitle: "Author",
+  description: "Children's book author and founder of Ryterly Publishing",
+  sameAs: [
+    "https://www.instagram.com/storiesbyaeysha/",
+    "https://www.linkedin.com/in/aeysha-mahmood-4b2684183/",
+    "https://www.amazon.com/stores/author/B0DPVSXWCY",
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "Ryterly Publishing",
+    url: "https://ryterly.com",
+  },
 };
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-hero-gradient">
         {/* Decorative floating elements */}

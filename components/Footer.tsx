@@ -49,33 +49,33 @@ export default function Footer() {
               young readers that every story matters.
             </p>
             {/* Social Icons */}
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-3 mt-6">
               <a
                 href="https://www.instagram.com/storiesbyaeysha/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-white rounded-full flex items-center justify-center text-softgray hover:text-rosegold hover:shadow-md transition-all duration-300"
-                aria-label="Instagram"
+                className="w-11 h-11 bg-white rounded-full flex items-center justify-center text-softgray hover:text-rosegold hover:shadow-md transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-rosegold"
+                aria-label="Follow Aeysha on Instagram"
               >
-                <Instagram size={16} />
+                <Instagram size={17} />
               </a>
               <a
                 href="https://www.linkedin.com/in/aeysha-mahmood-4b2684183/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-white rounded-full flex items-center justify-center text-softgray hover:text-rosegold hover:shadow-md transition-all duration-300"
-                aria-label="LinkedIn"
+                className="w-11 h-11 bg-white rounded-full flex items-center justify-center text-softgray hover:text-rosegold hover:shadow-md transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-rosegold"
+                aria-label="Connect with Aeysha on LinkedIn"
               >
-                <Linkedin size={16} />
+                <Linkedin size={17} />
               </a>
               <a
                 href="https://www.amazon.com/stores/author/B0DPVSXWCY"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-white rounded-full flex items-center justify-center text-softgray hover:text-rosegold hover:shadow-md transition-all duration-300"
-                aria-label="Amazon Author Page"
+                className="w-11 h-11 bg-white rounded-full flex items-center justify-center text-softgray hover:text-rosegold hover:shadow-md transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-rosegold"
+                aria-label="Aeysha Mahmood on Amazon"
               >
-                <AmazonIcon size={16} />
+                <AmazonIcon size={17} />
               </a>
             </div>
           </div>

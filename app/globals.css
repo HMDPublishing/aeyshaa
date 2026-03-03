@@ -64,3 +64,30 @@ body {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+/* Minimum touch targets for mobile — 44×44px */
+@media (max-width: 768px) {
+  button,
+  [role="button"],
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  /* Restore inline anchors (footer text links) */
+  p a,
+  li a {
+    min-height: unset;
+    display: inline;
+  }
+}
+
+/* Focus-visible global ring for accessibility */
+:focus-visible {
+  outline: 2px solid #B76E79;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}

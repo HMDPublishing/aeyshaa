@@ -4,10 +4,40 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, ShoppingCart, Star, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Books by Aeysha Mahmood — Children's Books for Curious Young Minds",
+  title: "Books by Aeysha Mahmood",
   description:
-    "Explore Aeysha Mahmood's children's books: 'Lilly & Tommy: A Cat's Adventure' and 'History's Wildest Tales for Curious Kids.' Stories that spark wonder.",
+    "Explore books by Aeysha Mahmood including 'Lilly & Tommy: A Cat's Adventure' and 'History's Wildest Tales for Curious Kids'. Available on Amazon.",
+  alternates: { canonical: "https://aeyshaa.com/books" },
 };
+
+const booksJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Lilly & Tommy: A Cat's Adventure",
+    author: { "@type": "Person", name: "Aeysha Mahmood" },
+    genre: "Children's Picture Book",
+    audience: { "@type": "Audience", audienceType: "Children ages 3-7" },
+    url: "https://www.amazon.com/Lilly-Tommy-Adventure-Girls-Devotion-ebook/dp/B0F1YV3CFT",
+    image: "https://aeyshaa.com/assets/lilly-and-tommy-book-cover.webp",
+    description:
+      "A heartwarming tale about a little girl's bravery in rescuing her beloved cat Tommy.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "History's Wildest Tales for Curious Kids",
+    author: { "@type": "Person", name: "Aeysha Mahmood" },
+    isbn: "978-1-83556-581-0",
+    genre: "Children's Non-Fiction",
+    audience: { "@type": "Audience", audienceType: "Children ages 8-12" },
+    publisher: { "@type": "Organization", name: "Ryterly Publishing" },
+    image: "https://aeyshaa.com/assets/history-wildest-tales.webp",
+    description:
+      "50 wild, weird, and wonderful true stories from history for curious kids.",
+    datePublished: "2026-03-15",
+  },
+];
 
 const lillyThemes = ["Friendship", "Bravery", "Responsibility", "Adventure", "Empathy", "Pets"];
 const historyChapters = [
@@ -26,6 +56,13 @@ const historyChapters = [
 export default function BooksPage() {
   return (
     <div className="min-h-screen pt-20">
+      {booksJsonLd.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       {/* PAGE HEADER */}
       <section className="relative py-20 bg-hero-gradient overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

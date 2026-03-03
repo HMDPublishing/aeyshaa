@@ -3,9 +3,25 @@ import Link from "next/link";
 import { Edit3, Layout, Globe, Megaphone, Palette, User, Phone, Mail, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ryterly Publishing — Professional Book Publishing Services",
+  title: "Ryterly Publishing",
   description:
-    "Ryterly Publishing by Aeysha Mahmood offers professional editing, design, publishing, and marketing services. The art of authorship, perfected.",
+    "Ryterly Publishing — founded by Aeysha Mahmood. Professional book editing, design, publishing, and marketing services for self-published authors.",
+  alternates: { canonical: "https://aeyshaa.com/ryterly" },
+};
+
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Ryterly Publishing",
+  url: "https://ryterly.com",
+  founder: { "@type": "Person", name: "Aeysha Mahmood" },
+  description:
+    "Full-service publishing company helping authors bring their stories to life.",
+  email: "ryterly@gmail.com",
+  sameAs: [
+    "https://www.instagram.com/ryterly_publishing/",
+    "https://www.linkedin.com/company/ryterly-publishing/",
+  ],
 };
 
 const services = [
@@ -56,6 +72,10 @@ const services = [
 export default function RyterlyPage() {
   return (
     <div className="min-h-screen pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
       {/* HERO */}
       <section className="relative py-24 overflow-hidden bg-gradient-to-br from-rosegold-dark via-rosegold to-rosegold-light">
         <div className="absolute inset-0 pointer-events-none opacity-10">

@@ -4,9 +4,10 @@ import Link from "next/link";
 import { Heart, BookOpen, Sparkles, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Aeysha Mahmood — Author & Founder of Ryterly Publishing",
+  title: "About Aeysha Mahmood",
   description:
-    "Learn about Aeysha Mahmood — children's book author, book designer, and founder of Ryterly Publishing. Discover her journey from book designer to published author.",
+    "Learn about Aeysha Mahmood — children's book author, book designer, and founder of Ryterly Publishing. Discover her journey from book design to published author.",
+  alternates: { canonical: "https://aeyshaa.com/about" },
 };
 
 const values = [
