@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
@@ -48,15 +47,13 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" aria-label="Aeysha Mahmood — Home">
-            <Image
-              src="/assets/aeysha-logo.png"
-              alt="Aeysha Mahmood"
-              width={42}
-              height={42}
-              className="h-9 md:h-[42px] w-auto object-contain"
-              priority
-            />
+          <Link href="/" className="group flex flex-col" aria-label="Aeysha Mahmood — Home">
+            <span className="font-playfair text-xl md:text-2xl text-charcoal tracking-wide group-hover:text-rosegold transition-colors duration-300">
+              Aeysha Mahmood
+            </span>
+            <span className="text-[10px] text-rosegold tracking-[0.2em] uppercase font-dmsans">
+              Author &amp; Storyteller
+            </span>
           </Link>
 
           {/* Desktop Links */}
