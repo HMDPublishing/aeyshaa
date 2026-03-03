@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://aeyshaa.com" },
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Aeysha Mahmood",
+  url: "https://aeyshaa.com",
+  description:
+    "Official website of Aeysha Mahmood — children's book author, storyteller, and founder of Ryterly Publishing.",
+};
+
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -33,6 +42,10 @@ const personJsonLd = {
 export default function HomePage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
@@ -160,10 +173,10 @@ export default function HomePage() {
                   <div className="relative w-36 h-36 rounded-xl overflow-hidden shadow-xl shadow-rosegold/10 group-hover:shadow-2xl group-hover:shadow-rosegold/20 transition-all duration-500 group-hover:-rotate-2">
                     <Image
                       src="/assets/lilly-and-tommy-book-cover.webp"
-                      alt="Lilly & Tommy: A Cat's Adventure"
+                      alt="Lilly & Tommy: A Cat's Adventure book cover"
                       fill
                       className="object-cover object-center"
-                      sizes="144px"
+                      sizes="(max-width: 768px) 50vw, 144px"
                     />
                   </div>
                 </div>
@@ -198,10 +211,10 @@ export default function HomePage() {
                   <div className="relative w-24 h-36 rounded-xl overflow-hidden shadow-xl shadow-rosegold/10 group-hover:shadow-2xl group-hover:shadow-rosegold/20 transition-all duration-500 group-hover:-rotate-2">
                     <Image
                       src="/assets/history-wildest-tales.webp"
-                      alt="History's Wildest Tales for Curious Kids"
+                      alt="History's Wildest Tales for Curious Kids book cover"
                       fill
                       className="object-cover object-center"
-                      sizes="96px"
+                      sizes="(max-width: 768px) 50vw, 96px"
                     />
                   </div>
                 </div>

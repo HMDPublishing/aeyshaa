@@ -58,22 +58,8 @@ export const metadata: Metadata = {
     title: "Aeysha Mahmood — Author & Storyteller",
     description: "Children's book author and founder of Ryterly Publishing.",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: "https://aeyshaa.com",
-  },
-};
-
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Aeysha Mahmood",
-  url: "https://aeyshaa.com",
-  description:
-    "Official website of Aeysha Mahmood — children's book author, storyteller, and founder of Ryterly Publishing.",
+  robots: { index: true, follow: true },
+  alternates: { canonical: "https://aeyshaa.com" },
 };
 
 export default function RootLayout({
@@ -87,16 +73,10 @@ export default function RootLayout({
       className={`${playfair.variable} ${dmsans.variable} ${cormorant.variable}`}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="theme-color" content="#FFF0F3" />
         <link
           rel="icon"
           href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23B76E79'/><text y='.9em' font-size='72' x='50' text-anchor='middle' fill='white' font-family='Georgia,serif' font-weight='bold'>A</text></svg>"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body className="bg-offwhite font-dmsans">
