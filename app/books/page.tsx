@@ -18,7 +18,7 @@ const booksJsonLd = [
     author: { "@type": "Person", name: "Aeysha Mahmood" },
     genre: "Children's Picture Book",
     audience: { "@type": "Audience", audienceType: "Children ages 3-7" },
-    url: "https://www.amazon.com/Lilly-Tommy-Adventure-Girls-Devotion-ebook/dp/B0F1YV3CFT",
+    url: "https://a.co/d/0gH0vEOd",
     image: "https://aeyshaa.com/assets/lilly-and-tommy-book-cover.webp",
     description:
       "A heartwarming tale about a little girl's bravery in rescuing her beloved cat Tommy.",
@@ -32,6 +32,7 @@ const booksJsonLd = [
     genre: "Children's Non-Fiction",
     audience: { "@type": "Audience", audienceType: "Children ages 8-12" },
     publisher: { "@type": "Organization", name: "Ryterly Publishing" },
+    url: "https://a.co/d/0iUwhiNT",
     image: "https://aeyshaa.com/assets/history-wildest-tales.webp",
     description:
       "50 wild, weird, and wonderful true stories from history for curious kids.",
@@ -149,7 +150,7 @@ export default function BooksPage() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://www.amazon.com/Lilly-Tommy-Adventure-Girls-Devotion-ebook/dp/B0F1YV3CFT?ref_=ast_author_dp&th=1&psc=1"
+                  href="https://a.co/d/0gH0vEOd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group bg-rosegold text-white px-7 py-3.5 rounded-full font-dmsans text-sm tracking-wide hover:bg-rosegold-dark transition-all duration-300 hover:shadow-lg hover:shadow-rosegold/20 flex items-center justify-center gap-2"
@@ -158,7 +159,7 @@ export default function BooksPage() {
                   Buy on Amazon
                 </a>
                 <a
-                  href="https://www.amazon.com/Lilly-Tommy-Adventure-Girls-Devotion-ebook/dp/B0F1YV3CFT?ref_=ast_author_dp&th=1&psc=1"
+                  href="https://a.co/d/0gH0vEOd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group border border-rosegold text-rosegold px-7 py-3.5 rounded-full font-dmsans text-sm tracking-wide hover:bg-rosegold hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
@@ -195,7 +196,7 @@ export default function BooksPage() {
               {/* Release date badge */}
               <div className="inline-flex items-center gap-2 bg-blush-100 border border-blush-200 text-rosegold px-4 py-2 rounded-full font-dmsans text-xs tracking-wide mb-5">
                 <Calendar size={13} />
-                Releasing March 15, 2026
+                Available Now
               </div>
 
               <h2 className="font-playfair text-4xl md:text-5xl text-charcoal mb-2 leading-tight">
@@ -233,12 +234,17 @@ export default function BooksPage() {
                 </div>
               </div>
 
-              {/* CTAs — pre-order coming soon */}
+              {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex items-center justify-center gap-2 bg-blush-100 text-softgray px-7 py-3.5 rounded-full font-dmsans text-sm tracking-wide cursor-not-allowed opacity-80 border border-blush-200">
-                  <Calendar size={15} />
-                  Available March 15, 2026
-                </div>
+                <a
+                  href="https://a.co/d/0iUwhiNT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-rosegold text-white px-7 py-3.5 rounded-full font-dmsans text-sm tracking-wide hover:bg-rosegold-dark transition-all duration-300 hover:shadow-lg hover:shadow-rosegold/20 flex items-center justify-center gap-2"
+                >
+                  <ShoppingCart size={15} />
+                  Buy on Amazon
+                </a>
                 <Link
                   href="/contact"
                   className="group border border-rosegold text-rosegold px-7 py-3.5 rounded-full font-dmsans text-sm tracking-wide hover:bg-rosegold hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
